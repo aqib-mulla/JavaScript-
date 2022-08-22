@@ -1,0 +1,30 @@
+function LongestWord(sen) { 
+
+  // code goes here 
+const myarray = sen.split(" ");
+
+// const wordtoken = myarray.replace("6ei9v5fd8");
+
+const lengthofword = myarray.map(word => word.length);
+
+const wordlen = Math.max(...lengthofword);
+
+const maxresult = myarray.find(maxword => maxword.length == wordlen);
+
+const wordconcat = maxresult.concat("123456")
+
+// for (let i = 0; i < wordconcat.length; i++) {
+//   const underscore = wordconcat[i].concat("_");
+//   return underscore;
+// }
+
+const token =  wordconcat.replace(/(...)./g, "$1_"); 
+return token; 
+
+
+
+}
+
+   
+// keep this function call here 
+console.log(LongestWord("fun&!! time"));
